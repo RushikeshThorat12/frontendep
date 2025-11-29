@@ -2,7 +2,7 @@ name: Build and Test React App
 
 on:
   push:
-    branches: [ main ]
+    branches: [ Localchanges ]
   pull_request:
 
 jobs:
