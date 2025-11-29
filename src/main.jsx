@@ -1,17 +1,17 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
-import App from './App';
-import './index.css';
+// src/main.jsx
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import App from "./App";
+import ErrorBoundary from "./ErrorBoundary"; // we’ll create this next
+import "./index.css"; // keep your global styles
 
-console.log('main mount');
-
-const container = document.getElementById('root');
-const root = createRoot(container);
-root.render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <ErrorBoundary>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </ErrorBoundary>
   </React.StrictMode>
 );
