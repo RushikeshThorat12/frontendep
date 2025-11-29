@@ -2,7 +2,7 @@ name: Build and Upload Artifact
 
 on:
   push:
-    branches: [ main ]
+    branches: [ Localchanges ]
   pull_request:
 
 jobs:
