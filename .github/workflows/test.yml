@@ -1,9 +1,8 @@
-
-name: Build and Test React App
+name: Build and Upload Artifact
 
 on:
   push:
-    branches: [ Localchanges ]
+    branches: [ main ]
   pull_request:
 
 jobs:
@@ -22,7 +21,16 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-     
+      # You already said you're skipping lint
+      # - name: Lint
+      #   run: npm run lint
 
       - name: Build project
         run: npm run build
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-dist
+          path: dist/
+          retention-days: 7
