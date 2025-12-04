@@ -3,7 +3,7 @@ name: "CodeQL static analysis"
 on:
   push:
     branches:
-      - '**'
+      - 'Localchanges'
   pull_request:
   workflow_dispatch:
 
