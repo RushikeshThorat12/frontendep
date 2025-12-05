@@ -9,7 +9,7 @@ jobs:
 
     container:
       image: node:20
-      # options: --user node   # uncomment if needed
+      # options: --user node   # uncomment if neede
 
     steps:
       - name: Checkout repository
